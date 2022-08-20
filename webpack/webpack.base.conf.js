@@ -12,7 +12,7 @@ module.exports = {
         path: path.resolve(appDirectory, "build"),
     },
     resolve: {
-        extensions: ['.js', '.jsx', '.json', '.scss', '.sass']
+        extensions: [".js", ".jsx", ".json", ".scss", ".sass"]
     },
     module: {
         rules: [
@@ -50,8 +50,8 @@ module.exports = {
     },
     plugins: [
         new MiniCssExtractPlugin({
-            filename: '[name].[contenthash:8].css',
-            chunkFilename: '[id].[contenthash:8].css'
+            filename: "[name].[contenthash:8].css",
+            chunkFilename: "[id].[contenthash:8].css"
         })
     ]
 }
