@@ -1,0 +1,17 @@
+.movie-preview-item{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  height: max-content;
+  width: 100%;
+  overflow: hidden;
+
+  img, a {
+    width: 100%;
+  }
+
+  p {
+    padding: 12px;
+  }
+}
