@@ -1,7 +1,6 @@
 const {merge} = require("webpack-merge");
 const baseConfig = require("./webpack.base.conf");
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require("html-webpack-plugin");
+const {CleanWebpackPlugin} = require("clean-webpack-plugin");
 const CssMinimizerPlugin = require("css-minimizer-webpack-plugin")
 
 module.exports = merge(baseConfig, {
@@ -11,11 +10,7 @@ module.exports = merge(baseConfig, {
         chunkFilename: "[name].[contenthash:8].bundle.js",
     },
     plugins: [
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            minify: true,
-            template: "./src/index.html",
-        })
+        new CleanWebpackPlugin()
     ],
     optimization: {
         minimize: true,
