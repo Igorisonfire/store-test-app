@@ -1,8 +1,14 @@
 header {
   position: sticky;
   top: 0;
-  padding: 12px 0;
+  padding: 24px 0;
   z-index: 100;
   background-color: white;
   border-bottom: 1px solid gainsboro;
+
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
 }

@@ -1,0 +1,66 @@
+.movie-page {
+
+  .movie-grid-layout {
+    display: grid;
+    grid-gap: 24px;
+    grid-template-columns: 2fr 1fr;
+    grid-template-areas: "image description"
+                         "additional additional";
+
+    @media (max-width: 900px) {
+      grid-template-columns: 1fr;
+      grid-template-areas: "image"
+                           "description"
+                           "additional";
+    }
+
+    .grid-image {
+      grid-area: image;
+
+      img {
+        width: 100%;
+      }
+    }
+
+    .grid-description {
+      grid-area: description;
+      display: flex;
+      flex-direction: column;
+
+      & > *:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .grid-additional {
+      grid-area: additional;
+    }
+  }
+
+  &.genre-28 {
+    * {
+      font-family: 'Nunito Sans', sans-serif;
+    }
+    button{
+      background-color: black;
+    }
+  }
+
+  &.genre-10402{
+    * {
+      font-family: 'Roboto', sans-serif;
+    }
+    button{
+      background-color: blue;
+    }
+  }
+
+  &.genre-53{
+    * {
+      font-family: 'Ubuntu', sans-serif;
+    }
+    button{
+      background-color: purple;
+    }
+  }
+}

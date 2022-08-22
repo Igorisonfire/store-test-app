@@ -3,7 +3,6 @@
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  height: max-content;
   width: 100%;
   overflow: hidden;
 
@@ -11,7 +10,16 @@
     width: 100%;
   }
 
+  a {
+    display: flex;
+    flex-direction: column;
+  }
+
   p {
-    padding: 12px;
+    display: block;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    padding: 12px 0 0 12px;
   }
 }

@@ -3,12 +3,21 @@ import './index.scss'
 import CategoryRow from "../../components/CategoryRow";
 
 const Home = () => {
+    const GENRES = [
+        {id: 28, name: 'Action'},
+        {id: 10402, name: 'Music'},
+        {id: 53, name: 'Thriller'},
+    ]
 
     return (
         <div className={'page container home-page'}>
-            <CategoryRow title={'Popular'} category={'popular'}/>
-            <CategoryRow title={'Top Rated'} category={'top_rated'}/>
-            <CategoryRow title={'Upcoming'} category={'upcoming'}/>
+            {GENRES.map((genre) => (
+                <CategoryRow
+                    key={genre.id}
+                    title={genre.name}
+                    genreId={genre.id}
+                />
+            ))}
         </div>
     )
 }

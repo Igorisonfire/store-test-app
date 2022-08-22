@@ -1,0 +1,39 @@
+.arrow-button {
+  position: relative;
+  cursor: pointer;
+  display: flex;
+  width: 48px;
+  min-width: 48px;
+  height: 48px;
+  //background-color: red;
+
+  &:before {
+    content: '';
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    border-top: 4px solid black;
+    border-right: 4px solid black;
+    margin: auto;
+    top: 50%;
+    left: 50%;
+  }
+
+  &.back {
+    &:before {
+      transform: translate(-30%, -50%) rotate(225deg);
+    }
+  }
+
+  &.next {
+    &:before {
+      transform: translate(-70%, -50%) rotate(45deg);
+    }
+  }
+
+  &.disabled {
+    pointer-events: none;
+    cursor: default;
+    opacity: 0.4;
+  }
+}

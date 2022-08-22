@@ -4,50 +4,7 @@
   align-items: flex-start;
   overflow: hidden;
 
-
   h2 {
     padding-bottom: 24px;
-  }
-
-  .arrows-wrapper{
-    width: calc(100% + 24px);
-    display: flex;
-
-    .next{
-      transform: translateX(-24px);
-    }
-
-    .row-wrapper {
-      width: 100%;
-      margin: auto;
-      overflow: hidden;
-      display: flex;
-      position: relative;
-
-      .row {
-        display: flex;
-        width: 100%;
-        transition: linear 0.5s;
-
-        &>* {
-          padding-right: 24px;
-          min-width: 25%;
-
-          @media (max-width: 1080px) {
-            min-width: calc(100% / 3);
-          }
-
-          @media (max-width: 900px) {
-            min-width: 50%;
-          }
-        }
-      }
-    }
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
   }
 }
