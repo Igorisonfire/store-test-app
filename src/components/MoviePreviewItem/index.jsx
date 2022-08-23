@@ -9,7 +9,7 @@ export const MoviePreviewItem = (props) => {
     return(
         <li className={'movie-preview-item'}>
             <Link to={`/movie/${movie.id}`}>
-                <img src={generateImgUrl(movie.poster_path, 300)} alt={movie.title}/>
+                <img loading={'lazy'} src={generateImgUrl(movie.poster_path, 300)} alt={movie.title}/>
                 <p>{movie.title}</p>
             </Link>
         </li>

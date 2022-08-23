@@ -10,8 +10,6 @@ const WishlistButton = (props) => {
     const {setWishlistIsEmpty} = useContext(UiContext);
     const wishlistStr = localStorage.getItem('wishlist')
 
-
-
     useEffect(() => {
         if(wishlistStr && wishlistStr.search(movieId) !== -1) {
             setActive(true)
