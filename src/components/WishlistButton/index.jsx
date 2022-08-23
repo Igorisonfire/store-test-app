@@ -1,17 +1,24 @@
 import * as React from 'react'
 import './index.scss'
-import {useEffect, useState} from "react";
+import {useContext, useEffect, useState} from "react";
 import {removeIdFromLocalStorageWishlist, setIdToLocalStorageWishlist} from "../../services/localstorage.service";
+import {UiContext} from "../../conext/ui-context";
 
 const WishlistButton = (props) => {
     const {movieId} = props
     const [active, setActive] = useState(false)
+    const {setWishlistIsEmpty} = useContext(UiContext);
     const wishlistStr = localStorage.getItem('wishlist')
+
+
 
     useEffect(() => {
         if(wishlistStr && wishlistStr.search(movieId) !== -1) {
             setActive(true)
         }
+
+        //update state for star in header
+        setWishlistIsEmpty(!wishlistStr)
     }, [movieId, wishlistStr])
 
     const handleClick = () => {
