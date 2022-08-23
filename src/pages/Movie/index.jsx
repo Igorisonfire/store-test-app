@@ -4,7 +4,7 @@ import {useParams} from "react-router-dom";
 import {useEffect, useState} from "react";
 import {getMovie} from "../../services/movie.service";
 import WishlistButton from "../../components/WishlistButton";
-import {generateImgUrl} from "../../helpers/generateImgUrl";
+import {generateImgUrl} from "../../helpers/generate-img-url";
 
 const Movie = () => {
     const {id} = useParams();

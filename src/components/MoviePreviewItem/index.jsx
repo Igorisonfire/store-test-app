@@ -1,7 +1,7 @@
 import * as React from 'react'
 import './index.scss'
 import {Link} from "react-router-dom";
-import {generateImgUrl} from "../../helpers/generateImgUrl";
+import {generateImgUrl} from "../../helpers/generate-img-url";
 
 export const MoviePreviewItem = (props) => {
     const {movie} = props
