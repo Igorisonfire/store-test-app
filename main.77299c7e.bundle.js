@@ -134,8 +134,9 @@ var App = function App() {
 
 
 var container = document.getElementById("root");
-var root = (0,client/* createRoot */.s)(container);
-root.render( /*#__PURE__*/react.createElement(react_router_dom/* BrowserRouter */.VK, null, /*#__PURE__*/react.createElement(src_App, null)));
+var root = (0,client/* createRoot */.s)(container); //HashRouter for github pages (BrowserRouter - preferable)
+
+root.render( /*#__PURE__*/react.createElement(react_router_dom/* HashRouter */.UT, null, /*#__PURE__*/react.createElement(src_App, null)));
 
 /***/ })
 
