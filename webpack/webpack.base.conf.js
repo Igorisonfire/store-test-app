@@ -56,7 +56,6 @@ module.exports = {
             filename: 'index.html',
             template: path.resolve(appDirectory, "src/index.html"),
             chunks: 'bundle',
-            base: '/'
         }),
         new MiniCssExtractPlugin({
             filename: "[name].[contenthash:8].css",
