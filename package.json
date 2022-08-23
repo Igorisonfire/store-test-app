@@ -1,6 +1,6 @@
 {
     "name": "store-test-app",
-    "homepage": "https://igorisonfire.github.io/store-test-app",
+    "homepage": "https://igorisonfire.github.io/store-test-app/",
     "description": "Test App",
     "main": "src/index.jsx",
     "scripts": {
